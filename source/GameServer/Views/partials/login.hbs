@@ -1,0 +1,68 @@
+<div>
+    <div onclick="handleDisplayFormLogin()" style="width:auto;margin-right: 10px;" id="loginHeader"><i
+            class="	fa fa-user-circle"> </i>Login</div>
+
+    <div id="formLogin" class="modal">
+
+        <form class="modal-content animate" action="/login" method="post">
+            <div class="imgcontainer">
+                <span onclick="handleHiddenFormLogin()" class="close" title="Close Modal">&times;</span>
+                <img src="/images/login.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" id="usernameLogin" required>
+
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" id="passwordLogin" required>
+
+                <label for = "expiredtime"><b>Thời gian giữ trạng thái đăng nhập :</b></label>
+                <select name="expiredtime" id="expiredtime">
+                    <option value="1h"> 1 tiếng</option>
+                    <option value="1d"> 1 ngày</option>
+                    <option value="10d"> 10 ngày</option>
+                </select>
+
+                <span id="errorLogin" style="color : red"></span>
+
+                <button type="button" id="btnSubmitLogin">Login</button>
+
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="handleCancelFormLogin()" class="cancelbtn">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == document.getElementById('formLogin')) {
+            document.getElementById('formLogin').style.display = "none";
+            $(".content").first().css("display", "block")
+        }
+        else if (event.target == document.getElementById("formRegister")) {
+            document.getElementById('formRegister').style.display = "none";
+            $(".content").first().css("display", "block")
+        }
+    }
+
+    const handleDisplayFormLogin = () => {
+        document.getElementById('formLogin').style.display = 'block';
+        $(".content").first().css("display", "none")
+    }
+
+    const handleHiddenFormLogin = () => {
+        document.getElementById('formLogin').style.display = 'none'
+        $(".content").first().css("display", "block")
+    }
+
+    const handleCancelFormLogin = () => {
+        document.getElementById('formLogin').style.display = 'none';
+        $(".content").first().css("display", "block");
+    }
+</script>

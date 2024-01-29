@@ -1,0 +1,50 @@
+<div id = "WindowPlayGame">
+    <div>
+        <label for="InputNamePlayTable"><b>Nhập tên bảng :</b></label>
+        <input type="text" placeholder="nhap ten bang" id = "InputNamePlayTable">
+        <div style = "border : solid 2px rgb(202, 187, 187);border-radius:2px;  padding : 2px">
+            <label for="typetable"><b>Loại bảng :</b></label>
+            <div class  = "d-flex flex-wrap">
+                <div><b>Bảng 1 : </b> <img src="/images/table1.png" alt="image"></div>
+                <div><b>Bảng 2 : </b> <img src="/images/table2.png" alt="image"></div>
+            </div>
+            <label for="typetable"><b>Lựa chọn bảng :</b></label>
+            <select name="TypeTable" id="typetable" style = "height: 30px; width : 100px; margin-top : 2px">
+                <option value="1">Bảng 1</option>
+                <option value="2">Bảng 2</option>
+            </select>
+        </div>
+
+        <div style = "border : solid 1.5px rgb(202, 187, 187); margin-top : 2px; border-radius:2px; padding : 2px">
+            <div><b>Loại Quân cờ :</b></div>
+            <div class  = "d-flex flex-wrap">
+                <div><b>Quân cờ 1 : </b> <img src="/images/chess1.png" alt="image"></div>
+                <div><b>Quân cờ 2 : </b> <img src="/images/chess2.png" alt="image"></div>
+                <div><b>Quân cờ 3 : </b> <img src="/images/chess3.png" alt="image"></div>
+            </div>
+            <label for="typechess"><b>Lựa chọn quân cờ:</b></label>
+            <select name="typechess" id="typechess" style = "height: 30px; width : 100px; margin-top : 2px">
+                <option value="1">Quân cờ 1</option>
+                <option value="2">Quân cờ 2</option>
+                <option value="3">Quân cờ 3</option>
+            </select>
+        </div>
+        <div style = "margin-top: 2px;">
+            <b>Thời gian giới hạn mỗi nước cờ: </b>
+            <select name="timelimit" id="timelimit" style = "height: 30px; width : 100px; margin-top : 2px;">
+                <option value="1">30s</option>
+                <option value="2">1m</option>
+            </select>
+        </div>
+
+        <div style = "margin-top: 2px;">
+            <b>Lựa chọn kích thước bàn cờ: </b>
+            <select name="sizetable" id="sizetable" style = "height: 30px; width : 100px; margin-top : 2px;">
+                <option value="1">default</option>
+                <option value="2">X 2 lần</option>
+            </select>
+        </div>
+        <button type = "button" class = "btn btn-success" id = "btnSubmitCreatePlayTable">submit</button>
+        <span style = "color : red" id = "errorToCreatePlayTable"></span>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+<div>
+    <nav class="navbar navbar-expand-lg bg-info" style="color : white">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" id="homePageHeader" href="#"><i class = "fa fa-home" style = "font-size: 30px;"></i><b>Home</b></a>
+                    </li>
+                </ul>
+                <div class="d-flex flex-wrap FunctionAuthen" role="search" style="margin-right: 3px;">
+                    <div class="nav-item">
+                        <div class="nav-link active">
+                            {{>login}}
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-link active">
+                            {{>register}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<script type="module">
+    if (localStorage.getItem("username") !== null) {
+        $(".FunctionAuthen").html(`
+            <div class="nav-item" style = "margin-right : 5px" id = "profile">
+                    <div class="nav-link active">
+                        <b><i class = "fa fa-id-card" style = "font-size:20px"></i>Profile</b>
+                    </div>
+            </div>
+
+            <div class="nav-item" style = "margin-right : 5px">
+                    <div class="nav-link active">
+                        <b>Hello ${localStorage.getItem("username")}!</b>
+                    </div>
+            </div>
+            <div class="nav-item" id = "logoutHeader">
+                    <div class="nav-link active">
+                        <b><i class = "fa fa-sign-out" style = "font-size:20px"></i>Logout</b>
+                    </div>
+            </div>
+        `)
+    }
+
+    $("#homePageHeader").click(() => {
+        location.href = "/"
+    })
+
+    if (localStorage.getItem("username") !== null) {
+        $(".HomePage").html(`
+        <div id="chatting">
+            <div class = "container">
+                <h5 style = "text-align: center"><i class = "fa fa-group"></i><b>Chatting</b></h5>   
+                <h4><b><i class ="fa fa-lightbulb-o" style = "color : chartreuse"></i>User Online</b></h4>
+                <div class="row">
+                    <div class="col-3 text-bg-light" id="listUserInChatBox">
+                    </div>
+                    <div class="col-9 text-bg-light" id="chatWindow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    `)
+    }
+</script>

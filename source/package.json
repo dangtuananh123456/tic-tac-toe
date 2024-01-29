@@ -1,0 +1,27 @@
+{
+  "name": "source",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "main": "cd GameServer && nodemon index.js",
+    "sub": "cd AuthServer && nodemon index.js",
+    "start": "concurrently \"npm run main\" \"npm run sub\""
+  },
+  "author": "dang tuan anh",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "concurrently": "^8.2.2",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "engine": "^1.0.0",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "jsonwebtoken": "^9.0.2",
+    "nodemon": "^3.0.2",
+    "socket.io": "^4.7.2"
+  }
+}

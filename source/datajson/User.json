@@ -1,0 +1,58 @@
+[
+    {
+        "Username": "anh1",
+        "Password": "$2a$10$kB72o8b9Rwp6e4xBneLObuQCLMC1az2rJzIAC91GFIUn.UVdM8UFS",
+        "FullName": "Dang Dang",
+        "Address": "Quảng trị fasfdsdfsdf",
+        "Avatar": "fa fa-thumbs-o-up"
+    },
+    {
+        "Username": "anh2",
+        "Password": "$2a$10$BXkB2MhXTJvqf0lM0zxaROqJpT2HYfZ5C4D7.Ke5EiPKdQRYkvalu",
+        "FullName": "123",
+        "Address": "123",
+        "Avatar": "fa fa-hand-grab-o"
+    },
+    {
+        "Username": "anh3",
+        "Password": "$2a$10$M.zLpYB.Im4jP7Ajj3qW1.xuOSTkIsV7/q4GIXNBBFn3hYLrFWq.e",
+        "FullName": "anh tuan dang",
+        "Address": "hai phong",
+        "Avatar": "fa fa-thumbs-o-up"
+    },
+    {
+        "Username": "anh4",
+        "Password": "$2a$10$M.zLpYB.Im4jP7Ajj3qW1.xuOSTkIsV7/q4GIXNBBFn3hYLrFWq.e",
+        "FullName": "132",
+        "Address": "hai phong",
+        "Avatar": "fa fa-hand-grab-o"
+    },
+    {
+        "Username": "un1",
+        "Password": "$2a$10$EPojV08YgRNL2Fj7JKSGsuL53nyvTOOKvPG09JniVTpr5SoMXv1aC",
+        "FullName": "anh tuan dang",
+        "Address": "hai phong",
+        "Avatar": "fa fa-thumbs-o-up"
+    },
+    {
+        "Username": "un2",
+        "Password": "$2a$10$EPojV08YgRNL2Fj7JKSGsuL53nyvTOOKvPG09JniVTpr5SoMXv1aC",
+        "FullName": "dang tuan anh",
+        "Address": "Quảng Trị",
+        "Avatar": "fa fa-thumbs-o-up"
+    },
+    {
+        "Username": "anh5",
+        "Password": "$2a$10$SYx9WgXieZyK7fUdq.A1gOsa71ksI3Th/6/dyiI93bbl9Plh8O/uC",
+        "FullName": "dang tuan anh",
+        "Address": "Quảng Trị",
+        "Avatar": "fa fa-hand-grab-o"
+    },
+    {
+        "Username": "anh123",
+        "Password": "$2a$10$XE3gi2o9Fn1NaaEnM3lYsehOLxOJkQGqsnoc8CREpB9PR3JD1mZYe",
+        "FullName": "123123",
+        "Address": "123",
+        "Avatar": "fa fa-hand-grab-o"
+    }
+]

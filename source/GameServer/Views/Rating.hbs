@@ -1,0 +1,35 @@
+<div class = "mt-4">
+    <table class="table table-success table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Ranking</th>
+                <th scope="col">Username</th>
+                <th scope="col">Point</th>
+            </tr>
+        </thead>
+        <tbody id="detailRatingPoint">
+
+        </tbody>
+    </table>
+
+</div>
+
+<script type="module">
+    let res = await fetch("/rating", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({}),
+    })
+    let data = await res.json();
+    for(let i = 0; i < data.length; i++) {
+        $("#detailRatingPoint").append(`
+            <tr>
+                <td>${i + 1}</td>
+                <td>${data[i].username}</td>
+                <td>${data[i].point}</td>
+            </tr>
+        `)
+    }
+</script>

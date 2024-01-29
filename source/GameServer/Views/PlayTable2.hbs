@@ -1,0 +1,128 @@
+
+<style>
+    table,
+    th,
+    td {
+        border: 2px solid black;
+    }
+
+    th,
+    td {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        font-size: 24px;
+        background-color : burlywood;
+    }
+</style>
+
+<div>
+    <h2 style = "background-color: rgb(239, 234, 227); text-align: center;"><b>Tic Tac Toe Table 1</b></h2>
+    <button type="button" class="btn btn-warning" id="joinTableToWatch">Tham gia </button>
+
+    <div id="windowBoardGame" style="display: none;">
+        <div class="d-flex flex-wrap justify-content-between">
+            <table id="tic-tac-toe">
+                <tr>
+                    <td class="itemtictactoe"></td>
+                    <td class="itemtictactoe"></td>
+                    <td class="itemtictactoe"></td>
+                </tr>
+                <tr>
+                    <td class="itemtictactoe"></td>
+                    <td class="itemtictactoe"></td>
+                    <td class="itemtictactoe"></td>
+                </tr>
+                <tr>
+                    <td class="itemtictactoe"></td>
+                    <td class="itemtictactoe"></td>
+                    <td class="itemtictactoe"></td>
+                </tr>
+            </table>
+            <div id="windowListUserRequireToPlayGame">
+                <h5 style = "background-color: rgb(241, 237, 233);padding:2px"><b>Đang yêu cầu tham gia chơi</b></h5>
+                <div id="listUserRequireToPlayGame">
+
+                </div>
+                <button type="btn" class="btn btn-success" id="btnSubmitUserToPlayGame">Hãy chọn hai người để
+                    chơi</button>
+            </div>
+        </div>
+        <div id="notifyThisStepForUser" style="color: royalblue;"></div>
+    </div>
+    <div style="display: none;" id="displayWindowChatInGame">
+        <div class="d-flex justify-content-between flex-wrap">
+            <div>
+                <button type="button" class="btn btn-success" id="requireToPlayGame" style="display:none">Play
+                    Game</button>
+                <button type="button" class="btn btn-danger" id="ManualReplayGame" style="display : none">Replay
+                    Game</button>
+                <button type="button" class="btn btn-info" id="btnWatchHistoryStep" style="display : none"> Watch
+                    History
+                    Step</button>
+                <div id="NotificationStatusAllowPlay" class = "btn btn-danger"></div>
+            </div>
+            <div id="windowChatInGame">
+                <h4><i class = "fa fa-group"></i>Chatting</h4>
+                <div id="contentChatInGame">
+
+                </div>
+                <input type="text" id="inputMessageInGame" placeholder="Nhập tin nhắn">
+                <div id="iconInGame" class="d-flex flex-wrap">
+                    <img src="/images/icon1.png" alt="image" style="height: 30px; width : 30px; margin-left:2px">
+                    <img src="/images/icon2.png" alt="image" style="height: 30px; width : 30px; margin-left:2px">
+                    <img src="/images/icon3.png" alt="image" style="height: 30px; width : 30px; margin-left:2px">
+                    <img src="/images/icon4.png" alt="image" style="height: 30px; width : 30px; margin-left:2px">
+                    <img src="/images/icon5.png" alt="image" style="height: 30px; width : 30px; margin-left:2px">
+                    <img src="/images/icon6.png" alt="image" style="height: 30px; width : 30px; margin-left:2px">
+                    <img src="/images/icon7.png" alt="image" style="height: 30px; width : 30px; margin-left:2px">
+                    <img src="/images/icon8.png" alt="image" style="height: 30px; width : 30px; margin-left:2px">
+                    <img src="/images/icon9.png" alt="image" style="height: 30px; width : 30px; margin-left:2px">
+                    <img src="/images/icon10.png" alt="image" style="height: 30px; width : 30px; margin-left:2px">
+                </div>
+                <button type="button" id="sendMessageInGame" class="btn btn-success"><i class = "fa fa-send" style = "font-size: 20px;"></i>Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type = "module">
+
+    //type chess
+    let typechess = localStorage.getItem("typechess");
+    let listitemtictactoe = $(".itemtictactoe");
+    if(typechess === "1"){
+        //den
+    }
+    else if(typechess === "2") {
+        //do
+        for(let i = 0; i < listitemtictactoe.length; i++) {
+            let item = listitemtictactoe.eq(i);
+            item.css("color", "red")
+        }
+    }
+    else{
+        //xanh
+        for(let i = 0; i < listitemtictactoe.length; i++) {
+            let item = listitemtictactoe.eq(i);
+            item.css("color", "green");
+        }
+    }
+
+    //size table
+
+    let sizetable = localStorage.getItem("sizetable");
+    if(sizetable === "1") {
+        //default
+    }
+    else{
+        let listTd = $("td");
+        for(let i = 0; i < listTd.length; i++) {
+            let item = listTd.eq(i);
+            item.css("width", "100px")
+            item.css("height", "100px")
+            item.css("font-size", "47px")
+        }
+    }
+
+</script>

@@ -1,0 +1,73 @@
+ <form class="modal-content animate" action="/register" method="post">
+    <div class="imgcontainer">
+        <img src="/images/login.png" alt="Avatar" class="avatar">
+    </div>
+    <div class="container">
+        <div style = "border : solid 1.5px rgb(213, 200, 200); background-color :rgb(213, 200, 200); border-radius :2px; margin-bottom : 4px;">
+            <h5><b>THÔNG TIN HỒ SƠ CỦA BẠN</b></h5>
+            <div><b>Avatar : </b><i class = "{{Avatar}}" style = "font-size: 50px; color : blue"></i></div>
+            <div><b>Username : </b> {{Username}}</div>
+            <div><b>Full Name : </b> {{FullName}}</div> 
+            <div><b>Address : </b> {{Address}}</div> 
+        </div>
+        <div>
+            <h5><b>THAY ĐỔI THÔNG TIN PROFILE CỦA BẠN</b></h5>
+            <label for="Password"><b>Password</b></label>
+            <input type="password" placeholder="Nếu không muôn thay đổi thì không cần nhập" name="Password" id="Password" />
+
+            <label for="repeatPassword"><b>Repeat password</b></label>
+            <input type="password" placeholder="Nếu không muôn thay đổi thì không cần nhập" name="repeatPassword" id="repeatPassword"
+                required />
+
+            <span id = "errRepeatPass" style = "color: red;"></span>
+
+            <label for="FullName"><b>Full Name</b></label>
+            <input type="text" placeholder="Nếu không muôn thay đổi thì không cần nhập" name="FullName" id="FullName"/>
+
+            <label for="address"><b>Address</b></label>
+            <input type="text" placeholder="Nếu không muôn thay đổi thì không cần nhập" name="Address" id="Address"/>
+
+            <ul>
+                <li><b>Avatar1</b> : <i class = "fa fa-thumbs-o-up"></i></li>
+                <li><b>Avatar2</b> : <i class = "fa fa-hand-peace-o"></i></li>
+                <li><b>Avatar3</b> : <i class = "fa fa-mars-stroke-v"></i></li>
+                <li><b>Avatar4</b> : <i class = "fa fa-mars"></i></li>
+                <li><b>Avatar5</b> : <i class = "fa fa-hand-grab-o"></i></li>
+            </ul>
+            <label for="address"><b>Avartar : </b></label>
+            <select name="Avatar" id="Avatar" style = "height : 60px;">
+                <option value="fa fa-thumbs-o-up">Avatar1<i class = "fa fa-thumbs-o-up"></i></option>
+                <option value="fa fa-hand-peace-o">Avatar2 <i class = "fa fa-hand-peace-o"></i></option>
+                <option value="fa fa-mars-stroke-v"><i class = "fa fa-mars-stroke-v"></i>Avatar3</option>
+                <option value="fa fa-mars">Avatar4 <i class = "fa fa-mars"></i></option>
+                <option value = "fa fa-hand-grab-o">Avatar 5</option>
+            </select>
+            <span style="color  : red " id="errorModify"></span>
+            <button id="btnSubmitModifyProfile" type="button">Modify</button>
+        </div>
+
+        <div style = "margin-top : 3px; background-color :rgb(213, 200, 200); border : solid 1.5px rgb(231, 223, 223)">
+            <button id = "watchHistoryPlayGameForUserInProfile" style = "text-align: center;" class = "btn btn-success" type = "button">XEM LỊCH SỬ THAM GIA TRÒ CHƠI</button>
+            <div id = "contentHistoryJoinTableUser" class = "d-flex flex-wrap justify-content-between">
+
+            </div>
+        </div>
+    </div>
+</form> 
+
+<style>
+    table,
+    th,
+    td {
+        border: 2px solid black;
+    }
+
+    th,
+    td {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        font-size: 24px;
+        background-color : burlywood;
+    }
+</style>
